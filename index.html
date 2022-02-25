@@ -7,6 +7,7 @@
     <link href="https://www.adalab.cn/admission.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="thumbnail.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 </head>
 
 <body>
@@ -36,6 +37,17 @@
             <p>第三段话</p>
             <h3>h3无题</h3>
             <p>第四段话</p>
+            
+            
+              <div id="waline"></div>
+              <script>
+                Waline({
+                    el: '#waline',
+                    serverURL: 'https://pinglun-aktvpy651-beginner-star.vercel.app/',
+                });
+              </script>
+            
+            
         </article>
     </main>
 
