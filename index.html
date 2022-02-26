@@ -7,13 +7,14 @@
     <link href="https://www.adalab.cn/admission.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="thumbnail.js"></script>
+
     <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 </head>
 
 <body>
 
     <header>
-        <img src="https://w.wallhaven.cc/full/9m/wallhaven-9mr5wk.jpg" height="200" alt="ufo">
+        <!-- <img src="https://w.wallhaven.cc/full/9m/wallhaven-9mr5wk.jpg" height="200" alt="ufo"> -->
     </header>
 
     <main>
@@ -21,40 +22,62 @@
             <ul>
                 <li> <a href="bilibili.html">跳转到视频页</a></li>
 
+                <video src="music/time.flac" controls="controls" width="200px" height="100px" autoplay="autoplay" hidden
+                    id="vd">
+                </video>
+
             </ul>
+
         </aside>
 
         <article>
-            <h1>探索</h1>
-            <img src="https://w.wallhaven.cc/full/3z/wallhaven-3z2pyd.jpg" alt="ufo">
-            <img src="https://w.wallhaven.cc/full/y8/wallhaven-y8w1dg.jpg" alt="图片" class="small" id="smart-image">
-            <h2>跳转</h2>
-            <h3>h3无题</h3>
-            <p>第一段话</p>
-            <h3>h3无题</h3>
-            <p>第二段话</p>
-            <h3>h3无题</h3>
-            <p>第三段话</p>
-            <h3>h3无题</h3>
-            <p>第四段话</p>
-            
-            
-              <div id="waline"></div>
-              <script>
+            <!-- <img src="imgs/row.jpeg" class="row"> -->
+            <p class="click2" id="click2">这是什么?</p>
+            <img src="imgs/moon.png" alt="图片">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <img src="imgs/space.jpg" alt="图片" class="small2 edging2" id="smart-image2">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <img src="imgs/man.jpg" alt="图片" class="small edging" id="smart-image">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <!-- <img src="imgs/hole.gif" alt="黑洞" class="hole"> -->
+            <img src="imgs/hole.gif" alt="黑洞" class="hole" id="p2">
+
+
+            <div id="waline"></div>
+            <script>
                 Waline({
                     el: '#waline',
                     serverURL: 'https://pinglun-aktvpy651-beginner-star.vercel.app/',
                 });
-              </script>
-            
-            
+            </script>
         </article>
+
+
     </main>
+
+
 
     <footer>
         by <a href="https://www.zhihu.com/people/ming-luo-sun-zhong-shan" target="_blank">
             CGTN</a> for <a href="https://www.adalab.cn" target="_blank">Adalab</a>
     </footer>
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            setInterval("toggleSound()", 100);
+        }
+
+        function toggleSound() {
+            var music = document.getElementById("vd");//获取ID  
+
+            if (music.paused) { //判读是否播放  
+                music.paused = false;
+                music.play(); //没有就播放 
+            }
+        }
+    </script>
+
 
 </body>
 
